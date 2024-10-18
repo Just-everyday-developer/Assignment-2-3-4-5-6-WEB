@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        form {
+            margin-left: 50px;
+        }
+        
+        form h2 {
+            margin-bottom: 20px;
+        }
+        form label {
+            margin-bottom: 50px;
+        }
+
+        .close {
+            cursor: pointer;
+        }
+
+        .checked {
+            text-decoration: line-through;
+            color: grey;
+        }
+
+        .element {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <h1 class="text-center mb-3">Assignment 5</h1>
+        <div class="row">
+            <div class="col-5">
+                <form action="" method="POST" onsubmit="return validate_form()">
+                    <h2>Validation form</h2>
+                    <label for="name">
+                        <legend>Name</legend>
+                        <input type="text" id="name" name="name">
+                    </label>
+                    <label for="surname">
+                        <legend>Surname</legend>
+                        <input type="text" name="surname" id="surname"><br>
+                    </label>
+                    <label for="email">
+                        <legend>email</legend>
+                        <input type="text" name="email" id="email"><br>
+                    </label>
+                    <label for="password">
+                        <legend>password</legend>
+                        <input type="password" name="password" id="password"><br>
+                        <input type="submit" class="btn btn-primary btn-md mt-3">
+                    </label>
+                </form>
+            </div>
+            <div class="col-7">
+                <form action="">
+                    <div id="header" class="rounded-3">
+                        <h1 class="display-6 fw-bold">Todo-List</h1>
+                        <div class="row">
+                            <div class="col-8">
+                                <input type="text" id="text_field" placeholder="Title..." class="form-control input-md mb-3">
+                            </div>
+                            <div class="col-4">
+                                <button type="button" onclick="NewElement()" class="btn btn-success btn-md">Add</button>
+                            </div>
+                        </div>
+                        <ul id="MyUL">
+                        </ul>
+                    </div>
+                </form>
+            </div>
+            <div class="col-6">
+                <h2 class="text-center">Number Sorting Tool</h2><br>
+                <form action="">
+                    <label for="sorting">
+                        <textarea id="numbers" placeholder="insert the series of numbers" class="form-control form-control-lg w-100" rows="5"></textarea>
+                        <button type="button" onclick="Number_Sorting_Tool(true, false)" class="btn btn-outline-primary">Ascending sort</button>
+                        <button type="button" onclick="Number_Sorting_Tool(false, true)" class="btn btn-outline-primary">Descending sort</button>
+                        <p id="Answer"></p>
+                    </label>
+                </form>
+            </div>
+            <div class="col-3">
+                <h2 class="text-center">Change background color</h2>
+                <form action="">
+                    <label for="bg-color">
+                        <button type="button" class="btn btn-outline-dark" onclick="change_background_color()">Alert on random color</button>
+                    </label>
+                </form>
+            </div>
+            <div class="col-3">
+                <h2 class="text-center me-1">Display Current Date and Time</h2>
+                <form action="">
+                    <label for="datetime">
+                        <button type="button" class="btn btn-outline-dark ms-5" onclick="Display_current_DateAndTime()">Display</button><br><br>
+                        <p id="Datetime"></p>
+                    </label>
+                </form>
+            </div>
+        </div>
+        <div class="container mb-5">
+            <h2 class="text-center">Random Number Guessing Game</h2>
+            <form action="" >
+                <div class="row">
+                    <div class="form-group">
+                            <div class="col-2 mb-3">
+                                <label for="guess_number">
+                                    <legend>Input the number between 0 and 100 inclusively</legend>
+                                    <input type="number" name="guess_number" id="guess_number" class="form-control input-lg">
+                                    <button type="button" class="btn btn-primary mt-3" onclick="Guess_My_Number()">Отправить</button>
+                                    <h3 id="Answer_guess_number"></h3>
+                                </label>
+                                
+                        </div>
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="script_for_assignment_4.js"></script>
+</body>
+</html>

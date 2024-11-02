@@ -6,48 +6,61 @@
     <title>Каталог - Jetix</title>
     <link rel="stylesheet" href="css.css">
     <link rel="icon" href="jetix-logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMsP8K7y5L6Qb39u7UasKZ9i67c0G3k5Bb0bM3" crossorigin="anonymous">
 
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="jetix-logo.jpg" alt="Jetix Logo">
-        </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="cataloge.html">Каталог моделей</a></li>
-                <li><a href="extr.html">Акции и новости</a></li>
-                <li><a href="Support.html">Поддержка</a></li>
-                <li><a href="Contacts.html">Контакты</a></li>
-
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="jetix-logo.jpg" alt="Jetix Logo" height="75px" width="90px"> Эксперт GPS часов
+                </a>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="cataloge.html">Каталог моделей</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Contacts.html">Контакты</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="Support.html">Поддержка</a></li>
+                        <li class="nav-item ms-4">
+                            <button type="button" class="btn btn-outline-dark" onclick="change_background_color()">Change background color</button>
+                        </li>
+                    </ul>
+                    <div class="d-flex flex-wrap align-items-center">
+                        <a href="#" class="btn btn-outline-danger mb-3 me-2">Проверить оригинальность</a>
+                        <a href="#" class="btn btn-outline-danger mb-3">Партнерам</a>
+                    </div>
+                    
+            </div>
         </nav>
-        <div class="account">
-            <a href="#" class="login-btn">Вход</a>
-            <a href="#" class="register-btn">Регистрация</a>
-        </div>
     </header>
 
     <main>
+        <section class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4 text-center mb-5 greeting hidden" id="greeting">Добро пожаловать!</h1>
+            </div>
+        </section>
         <section class="catalog">
             <h1>Каталог</h1>
 
             <div class="filters">
-                <div class="features">
-                    <h2>Особенности</h2>
-                    <ul>
-                        <li><input type="checkbox" id="4g" name="4g"><label for="4g">4G и видеозвонки</label></li>
-                        <li><input type="checkbox" id="gps" name="gps"><label for="gps">GPS навигация</label></li>
-                        <li><input type="checkbox" id="wifi" name="wifi"><label for="wifi">Wi-Fi подключение</label></li>
-                        <li><input type="checkbox" id="waterproof" name="waterproof"><label for="waterproof">Водостойкость</label></li>
-                    </ul>
-                </div>
-                <div class="age-group">
-                    <h2>Возраст</h2>
-                    <ul>
-                        <li><input type="checkbox" id="preschool" name="preschool"><label for="preschool">Дошкольники</label></li>
-                        <li><input type="checkbox" id="school" name="school"><label for="school">Школьники</label></li>
-                    </ul>
+                <div class="filters d-flex gap-4">
+                    <div class="features flex-fill">
+                        <h2>Особенности</h2>
+                        <ul>
+                            <li><input type="checkbox" id="4g" name="4g"><label for="4g"> 4G и видеозвонки</label></li>
+                            <li><input type="checkbox" id="gps" name="gps"><label for="gps"> GPS навигация</label></li>
+                            <li><input type="checkbox" id="wifi" name="wifi"><label for="wifi"> Wi-Fi подключение</label></li>
+                            <li><input type="checkbox" id="waterproof" name="waterproof"><label for="waterproof"> Водостойкость</label></li>
+                        </ul>
+                    </div>
+                    <div class="age-group flex-fill">
+                        <h2>Возраст</h2>
+                        <ul>
+                            <li><input type="checkbox" id="preschool" name="preschool"><label for="preschool"> Дошкольники</label></li>
+                            <li><input type="checkbox" id="school" name="school"><label for="school"> Школьники</label></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="color-selection">
                     <h2>Цвет</h2>
@@ -62,7 +75,7 @@
 
             <div class="products">
                 <div class="product">
-                    <img src="watch1.jpg" alt="JETIX QF45 (Wi-Fi)">
+                    <img src="Watch1.jpg" alt="JETIX QF45 (Wi-Fi)">
                     <h3>JETIX QF45 (Wi-Fi)</h3>
                     <p>2199 руб</p>
                 </div>
@@ -74,61 +87,42 @@
             </div>
         </section>
 
-        <section class="description">
-            <h2>Смарт-часы для детей</h2>
-            <p>JETIX специализируется на продаже детских смарт-часов. Мы предлагаем лучшие решения для родителей...</p>
-        </section>
-
         <section class="three-cards">
             <h2>Популярные товары</h2>
             <div class="card-wrapper">
                 <div class="card">
-                    <img src="watch1.jpg" alt="Card 1">
-                    <p>Лучшие детские смарт-часы 2022 года</p>
+                    <img src="watch_1.jpg" alt="Card 1">
+                    <p>Лучшие смарт-часы 2022 года</p>
                 </div>
                 <div class="card">
-                    <img src="watch1.jpg" alt="Card 2">
-                    <p>Детские смарт-часы JETIX QF45</p>
+                    <img src="watch_2.jpg" alt="Card 2">
+                    <p>Смарт-часы JETIX QF45</p>
                 </div>
                 <div class="card">
-                    <img src="watch1.jpg" alt="Card 3">
-                    <p>5 лучших детских смарт-часов JETIX</p>
+                    <img src="watch_3.jpg" alt="Card 3">
+                    <p>5 лучших смарт-часов JETIX 2023 года</p>
                 </div>
             </div>
         </section>
 
-        <section class="videos">
-            <h2>Видео</h2>
-            <div class="video-gallery">
-                <div class="video">
-                    <img src="video1.jpg" alt="Video 1">
-                    <p>Лучшие детские смарт-часы 2022 года</p>
-                </div>
-                <div class="video">
-                    <img src="video1.jpg" alt="Video 2">
-                    <p>Детские смарт-часы JETIX QF45</p>
-                </div>
-                <div class="video">
-                    <img src="video1.jpg" alt="Video 3">
-                    <p>5 лучших детских смарт-часов JETIX</p>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer>
         <p>© 2024 Jetix - Эксперт GPS часов</p>
         <div class="social-media">
-            <a href="#"><img src="1.jpg" alt="Facebook"></a>
-            <a href="#"><img src="2.jpg" alt="Instagram"></a>
-            <a href="#"><img src="3.jpg" alt="Twitter"></a>
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
         </div>
         <div class="authors">
-            Authors: Alibek, Talgat
-            <br>
-            Group: SE-2317
+            Author: Talgat
         </div>
     </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script_for_assignment_4.js"></script>
+    <script src="supportScript_for_assignment5.js"></script>
+    <script src="contactsScript_for_assignment5.js"></script>
 </body>
 </html>
-

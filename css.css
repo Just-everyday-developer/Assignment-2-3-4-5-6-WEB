@@ -11,14 +11,6 @@ body {
     line-height: 1.6;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: white;
-}
-
 header .logo img {
     max-width: 150px;
 }
@@ -192,13 +184,19 @@ footer p {
 
 footer .social-media {
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
     gap: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-footer .social-media a img {
-    width: 30px;
-    border-radius: 15px;
+footer .social-media a {
+    color: #fff; /* Установить белый цвет текста */
+    text-decoration: none; /* Убрать подчеркивание */
+}
+
+footer .social-media a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении (по желанию) */
 }
 
 .three-cards {
@@ -247,4 +245,37 @@ footer .social-media a img {
 .authors {
     font-size: 25px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    display: inline-block;
+    opacity: 1;
+    animation: fadeIn 1s ease forwards;
+}
+
+.greeting {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.greeting span {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInLetter 0.5s ease forwards;
+    animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes fadeInLetter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

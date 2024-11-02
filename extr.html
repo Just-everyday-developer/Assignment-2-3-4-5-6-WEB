@@ -4,49 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Новости - Jetix</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="jetix-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="jetix-logo.jpg" alt="Jetix Logo">
-        </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="cataloge.html">Каталог моделей</a></li>
-                <li><a href="extr.html">Акции и новости</a></li>
-                <li><a href="Support.html">Поддержка</a></li>
-                <li><a href="Contacts.html">Контакты</a></li>
-            </ul>
+        <!-- Header code remains the same -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="jetix-logo.jpg" alt="Jetix Logo" height="75px" width="90px"> Эксперт GPS часов
+                </a>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!--<li class="nav-item"><a class="nav-link" href="cataloge.html">Каталог моделей</a></li>-->
+                        <li class="nav-item"><a class="nav-link" href="Contacts.html">Контакты</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="Support.html">Поддержка</a></li>
+                        <!--<li class="nav-item"><a class="nav-link" href="extr.html">Акции и новости</a></li>-->
+                        <li class="nav-item ms-4">
+                            <button type="button" class="btn btn-outline-dark" onclick="change_background_color()">Change background color</button>
+                        </li>
+                    </ul>
+                        <div class="d-flex flex-wrap" >
+                            <a href="#" class="btn btn-outline-danger mb-3 me-2">Проверить оригинальность</a>
+                            <a href="#" class="btn btn-outline-danger mb-3">Партнерам</a>
+                        </div>
+            </div>
         </nav>
-        <div class="account">
-            <a href="#" class="login-btn">Проверить оригинальность</a>
-            <a href="#" class="register-btn">Партнерам</a>
-        </div>
     </header>
 
     <main>
-        <section class="news">
+        <section class="container-fluid">
             <h1>Новости</h1>
-            <div class="news-grid">
-                <div class="news-item">
+            <div class="row">
+                <div class="col-4 news-item">
                     <p>Социальный бум</p>
                 </div>
-                <div class="news-item">
+                <div class="col-4 news-item">
                     <p>Социальный бум</p>
                 </div>
-                <div class="news-item">
+                <div class="col-4 news-item">
                     <p>Социальный бум</p>
                 </div>
-                <div class="news-item">
+                <div class="col-4 news-item">
                     <p>Социальный бум</p>
                 </div>
-                <div class="news-item">
+                <div class="col-4 news-item">
                     <p>Социальный бум</p>
                 </div>
-                <div class="news-item">
+                <div class="col-4 news-item">
                     <p>Социальный бум</p>
                 </div>
             </div>
@@ -79,7 +87,7 @@
             </div>
         </div>
         <div class="authors">
-            Authors: Alibek, Talgat
+            Author: Alibek
             <br>
             Group: SE-2317
         </div>

@@ -19,14 +19,39 @@ a {
     font-size: px;
 }
 
-.carousel {
-    max-width: 100%;  /* Ограничивает ширину до 100% контейнера */
-    margin: 0 auto;   /* Центрирует карусель */
+body {
+    background-color: white;
+    color: black;
 }
 
-.carousel img {
-    height: auto;     /* Подгоняет высоту изображения автоматически */
-    max-height: 1500px;  /* Ограничивает максимальную высоту, если нужно */
+footer {
+    background-color: rgba(255, 255, 255, 0.8); 
 }
 
+body.night-theme {
+    background-color: rgba(50, 50, 50, 0.8);
+    color: white;
+}
+
+footer.night-theme {
+    background-color: rgba(50, 50, 50, 0.8); 
+    color: white
+}
+
+.additional-content {
+    display: none;
+}
+
+.text {
+    font-size: larger;
+}
+
+.huge-text {
+    font-size: 30px;
+}
+
+.star { 
+    cursor: pointer;
+    width: 45px;
+}
 

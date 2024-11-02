@@ -7,6 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="styles_for_contacts.css">
     <link rel="icon" href="jetix-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles_for_support.css">
 
 </head>
 <body>
@@ -20,7 +22,9 @@
                         <li class="nav-item"><a class="nav-link" href="cataloge.html">Каталог моделей</a></li>
                         <li class="nav-item"><a class="nav-link active" href="Contacts.html">Контакты</a></li>
                         <li class="nav-item"><a class="nav-link" href="Support.html">Поддержка</a></li>
-                        <li class="nav-item"><a class="nav-link" href="extr.html">Акции и новости</a></li>
+                        <li class="nav-item ms-4">
+                          <button type="button" class="btn btn-outline-dark" onclick="changeColor()">White/Black Theme</button>
+                        </li>
                     </ul>
                     <div class="d-flex flex-wrap">
                         <a href="#" class="btn btn-outline-danger mb-3 me-2">Проверить оригинальность</a>
@@ -31,71 +35,46 @@
     </header>
 
     <main class="mb-5 mt-5 container">
-        <div class="carousel-container mb-5">
-            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="successful man 1.jpg" class="d-block w-100 img-fluid" alt="assistant">
-                    <div class="carousel-caption d-none d-md-block text-light">
-                      <h3>Ассистент: Дмитрий Витон</h3>
-                      <button class="btn bg-light" style="width:70%">Связаться</button>
-                    </div>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="2000">
-                    <img src="successful man 2.jpg" class="d-block w-100 img-fluid" alt="assistant">
-                    <div class="carousel-caption d-none d-md-block text-light">
-                      <h3>Ассистент: Виктор Евгеньев</h3>
-                      <button class="btn bg-light" style="width:70%">Связаться</button>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="successful man 3.jpg" class="d-block w-100 img-fluid" alt="assistant">
-                    <div class="carousel-caption d-none d-md-block text-light">
-                      <h3>Ассистент: Мереин Кунин</h3>
-                      <button class="btn bg-light" style="width:70%">Связаться</button>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev bg-light" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next bg-light" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-        </div>
-    
+        <section class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4 text-center mb-5 greeting hidden" id="greeting">Добро пожаловать!</h1>
+            </div>
+        </section>
+
         <section class="container"> 
             <p class="text-center h1 mb-5"><span class="red-letter">К</span>онтакты</p>
             <div class="row gy-4">
-                <div class="col-md-3">
+                <div class="col-md-2 text">
                     <p><strong>Интернет магазин:</strong></p>
                     <p>(067) 466 41 64<br>(066) 466 41 64</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2 text">
                     <p><strong>Сотрудничество:</strong></p>
                     <p>(067) 632 55 54</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2 text">
                     <p><strong>График работы:</strong></p>
                     <p>С 10 до 17 (Пн-Сб)</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2 text">
                     <p><strong>Адрес:</strong></p>
                     <p>г. Днепр, пр. Дмитра Яворницкого 72</p>
                 </div>
+                <div class="mt-5 text-center col-4">
+                    <audio src="mixkit-software-interface-start-2574.wav" id="audio" controls style="display: none;"></audio>
+                    <p class="huge-text">Оцените наше качество</p>
+                    <span class="fa fa-star star fa-2x"></span>
+                    <span class="fa fa-star star fa-2x"></span>
+                    <span class="fa fa-star star fa-2x"></span>
+                    <span class="fa fa-star star fa-2x"></span>
+                    <span class="fa fa-star star fa-2x"></span>
+                </div>
             </div>
         </section>
-    </main>
-
-    <footer class="text-center text-lg-start bg-dark text-muted pt-1"> 
+        
+    </main><br>
+    
+      <footer class="text-center text-lg-start pt-1 mt-5"> 
         <section>
         <div class="container text-center text-md-start mt-5">
             <div class="row mt-3">
@@ -103,9 +82,13 @@
                     <h6 class="text-uppercase fw-bold mb-4">
                     <i class="fas fa-gem me-3"></i>Jetix
                     </h6>
-                    <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias nostrum debitis rem quis eum veniam eaque possimus laudantium doloremque quos excepturi tempore soluta totam, facilis reprehenderit numquam veritatis recusandae voluptate itaque hic aspernatur id fugit? Incidunt numquam modi impedit dicta labore! Reprehenderit illo dignissimos amet voluptatibus omnis explicabo molestias quasi!
+                    <p class="original-content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
+                    <div class="text-center">
+                        <button class="btn btn-success mb-5" id="readMoreButton">Читать далее</button>
+                    </div>
+                    
                 </div>
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                     <!-- Links -->
@@ -141,9 +124,10 @@
         </section>
     
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-        Authors: Talgat, Alibek 
+        Author: Talgat 
         </div>
   </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="contactsScript_for_assignment5.js"></script>
 </body>
 </html>

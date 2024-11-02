@@ -19,17 +19,25 @@
                         <li class="nav-item"><a class="nav-link" href="cataloge.html">Каталог моделей</a></li>
                         <li class="nav-item"><a class="nav-link" href="Contacts.html">Контакты</a></li>
                         <li class="nav-item"><a class="nav-link active" href="Support.html">Поддержка</a></li>
-                        <li class="nav-item"><a class="nav-link" href="extr.html">Акции и новости</a></li>
+                        <li class="nav-item ms-4">
+                            <button type="button" class="btn btn-outline-dark" onclick="change_background_color()">Change background color</button>
+                        </li>
                     </ul>
-                    <div class="d-flex flex-wrap">
-                        <a href="#" class="btn btn-outline-danger mb-3 me-2">Проверить оригинальность</a>
-                        <a href="#" class="btn btn-outline-danger mb-3">Партнерам</a>
-                    </div>
+                        <div class="d-flex flex-wrap" >
+                            <a href="#" class="btn btn-outline-danger mb-3 me-2">Проверить оригинальность</a>
+                            <a href="#" class="btn btn-outline-danger mb-3">Партнерам</a>
+                        </div>
             </div>
         </nav>
     </header>
 
     <main class="mt-5">
+        <section class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4 text-center mb-5 greeting hidden" id="greeting">Добро пожаловать!</h1>
+            </div>
+        </section>
+
         <div class="container">
             <h1 class="text-center"><span class="text-danger">П</span>оддержка</h1>
     
@@ -50,7 +58,7 @@
                     <h2 class="text-center mt-5 mb-5">С чего начать?</h2>
     
                     <div class="row">
-                        <div class="col-sm-6 col-md-3 me-5 card card-width d-flex flex-column">
+                        <div class="col-3 me-5 card card-width d-flex flex-column">
                             <img src="gps watch photo 1 step.jpg" class="card-img-top" alt="Установка">
                             <div class="card-body">
                                 <h5 class="card-title">Установка и настройка GPS часов</h5>
@@ -60,7 +68,7 @@
                                 <button class="btn btn-primary" type="button">Перейти</button>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-3 me-5 card card-width d-flex flex-column">
+                        <div class="col-3 me-5 card card-width d-flex flex-column">
                             <img src="gps watch photo 3 step.jpg" class="card-img-top" alt="Вход или регистрация">
                             <div class="card-body">
                                 <h5 class="card-title">Регистрация/Вход через существующий аккаунт Google, Yandex, Microsoft и т.д.</h5>
@@ -70,7 +78,7 @@
                                 <button class="btn btn-primary" type="button">Перейти</button>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-3 me-5 card card-width d-flex flex-column">
+                        <div class="col-3 me-5 card card-width d-flex flex-column">
                             <img src="gps watch photo 2 step.jpg" class="card-img-top" alt="Выбор Интерфейса">
                             <div class="card-body">
                                 <h5 class="card-title">Выбор графического интерфейса</h5>
@@ -80,14 +88,32 @@
                                 <button class="btn btn-primary" type="button">Перейти</button>
                             </div>
                         </div>
+                        
                     </div>
                 </div>   
                 <aside class="col-lg-3">
                     <h2>Сервис</h2>
-                    <div class="d-flex flex-column">
+                    <div class="d-flex flex-column mb-5">
                         <a href="#" class="btn btn-outline-danger mb-3">Отправить часы в сервис</a>
                         <a href="#" class="btn btn-outline-danger mb-3">Обнулить RegCode часов</a>
                         <a href="#" class="btn btn-outline-danger mb-3">Свяжитесь со мной</a>
+                    </div>
+                    <div class="mt-5">
+                        <form action="">
+                            <div id="header" class="rounded-3">
+                                <h1 class="display-6 fw-bold">Заметки</h1>
+                                <div class="row">
+                                    <div class="col-8">
+                                        <input type="text" id="text_field" placeholder="Title..." class="form-control input-md mb-3">
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="button" onclick="NewElement()" class="btn btn-success btn-md">Add</button>
+                                    </div>
+                                </div>
+                                <ul id="MyUL" class="list1b">
+                                </ul>
+                            </div>
+                        </form>
                     </div>
                 </aside>
             </div>
@@ -125,78 +151,126 @@
                             <button class="btn btn-primary" type="button">Перейти</button>
                         </div>
                     </div>
+                    <div class="col-9 mt-5">
+                        <h2 class="text-center mb-3">Number Sorting Tool</h2>
+                        <form action="">
+                            <label for="sorting">
+                                <textarea id="numbers" placeholder="insert the series of numbers" class="form-control form-control-lg w-auto" rows="5" cols="70"></textarea>
+                                <button type="button" onclick="Number_Sorting_Tool(true, false)" class="btn btn-outline-primary">Ascending sort</button>
+                                <button type="button" onclick="Number_Sorting_Tool(false, true)" class="btn btn-outline-primary">Descending sort</button>
+                                <p id="Answer"></p>
+                            </label>
+                        </form>
+                    </div>
                 </div>
             </div> 
-        <div class="col-lg-4 mb-5">
-            <form action="" method="POST">
-                <label for="basic-url" class="form-label">Отправьте детальное описание вашей проблемы и наши специалисты сразу выйдут с вами на контакт</label>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon3">Ваша почта</span>
-                    <input type="email" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                </div>
-                <div class="input-group input-group-">
-                    <span class="input-group-text">Опишите проблему</span>
-                    <textarea class="form-control" aria-label="With textarea" rows="10" id="basic-url"></textarea>
-                </div>
-                <div class="text-end mt-2">
-                    <button class="btn btn-outline-secondary" type="submit" id="button-addon1">Отправить</button>
-                </div>
-            </form>
+            <div class="col-lg-4 mb-5">
+                <form id="contactForm" onsubmit="return validate_form()">
+                    <label for="basic-url" class="form-label">Отправьте детальное описание вашей проблемы и наши специалисты сразу выйдут с вами на контакт</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon3">Ваше имя</span>
+                        <input type="text" class="form-control" id="name" name="name" aria-describedby="basic-addon3" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon3">Ваша фамилия</span>
+                        <input type="text" class="form-control" id="surname" name="surname" aria-describedby="basic-addon3" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-text">Опишите проблему</span>
+                        <textarea class="form-control" aria-label="With textarea" rows="10" id="problem" name="problem" required></textarea>
+                    </div> 
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="text-start mt-2">
+                                <button class="btn btn-danger" type="button" onclick="clear_all()">Clear all input fields</button>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-end mt-2">
+                                <audio src="mixkit-software-interface-start-2574.wav" id="audio"></audio>
+                                <button class="btn btn-outline-secondary" type="submit" onclick="soundBySendingForm();">Отправить</button>
+                            </div>
+                        </div>
+                    </div>
+                </form><br>
+                <p id="statusMessage" style="font-size: 25px;"></p>
+            </div>
+            
         </div>
-        </div>
-    </main>
-    
-    
-
-    <footer class="text-center text-lg-start bg-dark text-muted pt-1"> 
-        <section>
-        <div class="container text-center text-md-start mt-5">
-            <div class="row mt-3">
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                    <h6 class="text-uppercase fw-bold mb-4">
-                    <i class="fas fa-gem me-3"></i>Jetix
-                    </h6>
-                    <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias nostrum debitis rem quis eum veniam eaque possimus laudantium doloremque quos excepturi tempore soluta totam, facilis reprehenderit numquam veritatis recusandae voluptate itaque hic aspernatur id fugit? Incidunt numquam modi impedit dicta labore! Reprehenderit illo dignissimos amet voluptatibus omnis explicabo molestias quasi!
-                    </p>
+        <div class="container mb-5">
+            <div class="row mb-5">
+                <div class="col-6 mb-3">
+                    <h2 class="text-center">Random Number Guessing Game</h2>
+                    <label for="guess_number">
+                        <legend>Введите от 0 до 100 включительно</legend>
+                        <input type="number" name="guess_number" id="guess_number" class="form-control input-lg">
+                        <button type="button" class="btn btn-primary mt-3" onclick="Guess_My_Number()">Отправить</button>
+                        <h3 id="Answer_guess_number"></h3>
+                    </label>
                 </div>
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <h6 class="text-uppercase fw-bold mb-4">
-                    Useful links
-                    </h6>
-                    <p>
-                    <a href="#!" class="text-reset">Pricing</a>
-                    </p>
-                    <p>
-                    <a href="#!" class="text-reset">Settings</a>
-                    </p>
-                    <p>
-                    <a href="#!" class="text-reset">Orders</a>
-                    </p>
-                    <p>
-                    <a href="#!" class="text-reset">Help</a>
-                    </p>
-                </div>    
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                    <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
-                    <p>
-                    <i class="fas fa-envelope me-3"></i>
-                    info@example.com
-                    </p>
-                    <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                    <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                <div class="col-6">
+                    <h2 class="text-center">Display Current Date and Time</h2>
+                    <div class="d-flex justify-content-center mb-5">
+                        <button type="button" class="btn btn-outline-dark" onclick="Display_current_DateAndTime()">Display</button>
+                    </div>  
+                    <p id="Datetime" class="text-center"></p>
                 </div>
+                
             </div>
         </div>
-        </section>
-    
-        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-        Authors: Talgat, Alibek 
-        </div>
-  </footer>
+        
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script src="script.js"></script>
+    </main>
+
+    <footer class="text-center text-lg-start bg-dark text-muted pt-1">
+        <section>
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3"></i>Jetix
+                        </h6>
+                        <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias nostrum debitis rem quis eum veniam eaque possimus laudantium doloremque quos excepturi tempore soluta totam, facilis reprehenderit numquam veritatis recusandae voluptate itaque hic aspernatur id fugit? Incidunt numquam modi impedit dicta labore! Reprehenderit illo dignissimos amet voluptatibus omnis explicabo molestias quasi!
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                        Useful links
+                        </h6>
+                        <p>
+                        <a href="#!" class="text-reset">Pricing</a>
+                        </p>
+                        <p>
+                        <a href="#!" class="text-reset">Settings</a>
+                        </p>
+                        <p>
+                        <a href="#!" class="text-reset">Orders</a>
+                        </p>
+                        <p>
+                        <a href="#!" class="text-reset">Help</a>
+                        </p>
+                    </div>    
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                        <p>
+                        <i class="fas fa-envelope me-3"></i>
+                        info@example.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                        <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                    </div>
+                </div>
+            </div>
+            </section>
+        
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            Author: Talgat 
+            </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script_for_assignment_4.js"></script>
+    <script src="supportScript_for_assignment5.js"></script>
 </body>
 </html>
